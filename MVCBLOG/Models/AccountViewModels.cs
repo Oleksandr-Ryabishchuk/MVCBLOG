@@ -52,7 +52,8 @@ namespace MVCBLOG.Models
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
-
+        [Required]
+        public string Name { get; set; }
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
@@ -64,6 +65,8 @@ namespace MVCBLOG.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        public string Name { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

@@ -1,0 +1,25 @@
+﻿@model MVCBLOG.ViewModels.ThemeFormViewModel
+
+@{
+    ViewBag.Title = "CreateTheme";
+}
+
+<h2>Create Theme</h2>
+
+@using (Html.BeginForm("CreateTheme", "Blog"))
+{
+    <p class="alert alert-info">All fields are <strong>required</strong>.</p>
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.CreatedOn)
+        @Html.TextBoxFor(m => m.CreatedOn, new { @class = "form-control" })
+    </div>
+    <br />
+    <button type="submit" class="btm btn-primary btn-lg">Save</button>
+}
+

@@ -16,9 +16,171 @@
     white-space: normal;
 }
 
+span.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
 }
+
+/* Bootstrap Overrides */
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('fonts/glyphicons-halflings-regular.eot');
+    src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.popover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.navbar-inverse {
+    background-color: #ff4342;
+    border-color: #ff4342;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+    }
+
+    .navbar-inverse .navbar-brand {
+        color: #fff;
+    }
+
+    .navbar-inverse .notifications {
+        position: relative;
+    }
+
+        .navbar-inverse .notifications .badge {
+            position: absolute;
+            top: 8px;
+            right: -1px;
+            background: #a80a0a;
+        }
+
+    .navbar-inverse .navbar-nav > .open > a,
+    .navbar-inverse .navbar-nav > .open > a:hover,
+    .navbar-inverse .navbar-nav > .open > a:focus {
+        background-color: rgba(205, 40, 39, 0.55);
+    }
+
+.dropdown-menu {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+body {
+    font-size: 17px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 17px;
+    height: 44px;
+    -ms-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.dialog-content {
+    font-size: 20px;
+    height: 120px;
+    width: 400px; -ms-border-radius: 9px;
+    border-radius: 9px;
+    text-align: center;
+    transition-property: width;
+}
+
+
+.btn {
+    /*font-size: 17px;
+    padding: 7px 20px;*/
+    -ms-border-radius: 9px;
+    border-radius: 9px;
+}
+
+/*Page-level styles*/
+
+.posts {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom:10px;
+    
+
+}
+
+    .posts > li {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        margin-bottom: 30px;
+    }
+        .posts > li .details {
+            background:white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+.posts > li .details .title{
+   color:chocolate;
+}
+.posts > li .details .body {    
+    margin-bottom: 10px;
+}
+.posts > li .date {
+    color: chocolate;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+    .posts > li .date .timethemeuser .theme {
+        text-transform: uppercase;
+        font-size: 14px;
+        background: #FFE5B4;
+        position: absolute;
+    }
+    .posts > li .date .timethemeuser .time {
+        text-transform: uppercase;
+        font-weight: bold;
+        background: #ffcba4;
+        position: absolute;
+        color: chocolate;
+    }
+    .posts > li .date .timethemeuser .user {
+        position: absolute;
+        background: #692d00;
+        color: white;
+    }
+

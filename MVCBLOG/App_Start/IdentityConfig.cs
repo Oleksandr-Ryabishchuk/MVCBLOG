@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -16,10 +17,21 @@ namespace MVCBLOG
 {
     public class EmailService : IIdentityMessageService
     {
-        public Task SendAsync(IdentityMessage message)
+        public async Task SendAsync(IdentityMessage message)
         {
             // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            MailMessage mail = new MailMessage(new MailAddress("noreply@forum.com", "(do not reply)"),
+                new MailAddress(message.Destination));
+
+            mail.Subject = message.Subject;
+            mail.Body = message.Body;
+            mail.IsBodyHtml = true;
+
+            using (var mailClient = new MVCBLOG.Services.GmailEmailService())
+            {
+                mail.From = new MailAddress(mailClient.UserName, "(do not reply)");
+                await mailClient.SendMailAsync(mail);
+            }
         }
     }
 
