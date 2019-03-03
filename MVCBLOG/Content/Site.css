@@ -179,7 +179,7 @@ h6,
         color: chocolate;
     }
     .posts > li .date .timethemeuser .user { 
-        position: absolute;
+        position: absolute; 
         background: #692d00;
         color: white;
     }
